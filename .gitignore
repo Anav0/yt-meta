@@ -1,5 +1,9 @@
 /target
 /samples
+/data
 /napierala.ipynb
 data.csv
 .ipynb_checkpoints/
+.env
+.log
+.gitignore
