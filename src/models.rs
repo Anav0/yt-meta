@@ -1,10 +1,16 @@
 use std::{fmt, time::SystemTime};
 
 use crate::schema::videos;
-use chrono::{Date, DateTime, NaiveDate, NaiveDateTime, TimeZone, Utc};
+use chrono::{Date, DateTime, Local, NaiveDate, NaiveDateTime, TimeZone, Utc};
 use diesel::{prelude::*, sql_types::Timestamp};
 use serde::{de, Deserialize, Serialize};
 use serde_with::{serde_as, TimestampSeconds};
+
+#[derive(Queryable, Debug)]
+pub struct MostRecentForChannel {
+    pub channel_url: String,
+    pub max: Option<NaiveDate>,
+}
 
 #[derive(Insertable, Queryable, Serialize, Deserialize, Debug)]
 #[diesel(table_name=videos)]
@@ -15,6 +21,9 @@ pub struct VideoInfo {
     age_limit: Option<i16>,
     uploader_id: Option<String>,
     channel: String,
+    channel_url: String,
+    comment_count: Option<i64>,
+    like_count: i64,
     channel_follower_count: Option<i64>,
     playlist_id: Option<String>,
     playlist_title: Option<String>,
@@ -34,6 +43,9 @@ pub struct VideoInfo {
     upload_date: NaiveDate,
     ext: Option<String>,
     duration: Option<i32>,
+    duration_string: Option<String>,
+    filesize_approx: Option<i64>,
+    epoch: Option<i64>,
 }
 
 pub fn yt_date_to_date<'de, D>(deserializer: D) -> Result<NaiveDate, D::Error>

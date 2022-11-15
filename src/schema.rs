@@ -8,6 +8,9 @@ diesel::table! {
         age_limit -> Nullable<Int2>,
         uploader_id -> Nullable<Text>,
         channel -> Nullable<Text>,
+        channel_url -> Text,
+        comment_count -> Nullable<Int8>,
+        like_count -> Int8,
         channel_follower_count -> Nullable<Int8>,
         playlist_id -> Nullable<Text>,
         playlist_title -> Nullable<Text>,
@@ -25,5 +28,8 @@ diesel::table! {
         upload_date -> Nullable<Date>,
         ext -> Nullable<Text>,
         duration -> Nullable<Int4>,
+        duration_string -> Nullable<Text>,
+        filesize_approx -> Nullable<Int8>,
+        epoch -> Nullable<Int8>,
     }
 }

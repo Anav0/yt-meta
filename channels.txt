@@ -1,13 +1,12 @@
 # Co oni mają z tymi tv?
 
-# Anav
-https://www.youtube.com/channel/UCqo8Dov6MxYv3gSLGXpNA4Q
-
 # Litte wars tv
-#https://www.youtube.com/c/LittleWarsTV
+https://www.youtube.com/c/LittleWarsTV
 
 # Racjonalista tv
-#https://www.youtube.com/channel/UCG0A8feOHxkI8Ky1LM3YXNw
+https://www.youtube.com/channel/UCG0A8feOHxkI8Ky1LM3YXNw
 
 # Lepszy komentator
-# https://www.youtube.com/channel/UCS0BLcOAgDauU8ug9BJxaWA
+https://www.youtube.com/channel/UCS0BLcOAgDauU8ug9BJxaWA
+
+# dr Napierała
